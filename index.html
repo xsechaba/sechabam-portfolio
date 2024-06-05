@@ -37,123 +37,101 @@
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+        <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
+          <figure class="avatar-box">
+            <img src="./assets/images/sechaba-avatar.png" alt="Sechaba Mohlabeng" width="80">
+          </figure>
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <div class="info-content">
+            <h1 class="name" title="Sechaba Mohlabeng">Sechaba M</h1>
+            <p class="title">Data and Cloud Engineer</p>
+          </div>
 
-          <p class="title">Web developer</p>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <div class="separator"></div>
 
-      </div>
+          <ul class="contacts-list">
 
-      <div class="sidebar-info_more">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:xsechaba@gmail.com" class="contact-link">xsechaba@gmail.com</a>
+              </div>
+            </li>
 
-        <div class="separator"></div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+27791584303" class="contact-link">(+27) 79 158 4303</a>
+              </div>
+            </li>
 
-        <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+                <time datetime="1998-09-06">06 September 1998</time>
+              </div>
+            </li>
 
-          <li class="contact-item">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Johannesburg, South Africa</address>
+              </div>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+          </ul>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+          <div class="separator"></div>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
+          <ul class="social-list">
 
-          </li>
+            <li class="social-item">
+              <a href="https://www.facebook.com/yourprofile" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-          <li class="contact-item">
+            <li class="social-item">
+              <a href="https://www.twitter.com/yourprofile" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+            <li class="social-item">
+              <a href="https://www.instagram.com/yourprofile" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+          </ul>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
+        </div>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
+      </aside>
 
     <!--
       - #main-content
@@ -180,10 +158,10 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
-
+            <!--
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
+          </li>-->
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
@@ -201,210 +179,120 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
-          </p>
-
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
-          </p>
-        </section>
+          <article class="about active" data-page="about">
+            <header>
+              <h2 class="h2 article-title">About me</h2>
+            </header>
+            <section class="about-text">
+              <p>
+                I am a BSc in Construction Studies graduate currently advancing my skills in Data Engineering at the ExploreAI Academy.
+                With a robust background in cloud solutions and data management, I strive to merge technology and practicality in every project,
+                ensuring efficient and scalable solutions.
+              </p>
+              <p>
+                My expertise in cloud engineering and data pipelines enables me to design systems that are not only highly functional and user-friendly
+                but also optimized for performance and scalability. I am passionate about leveraging technology to solve real-world problems,
+                enhancing operational efficiency and data-driven decision making.
+              </p>
+            </section>
 
 
         <!--
           - service
         -->
 
-        <section class="service">
+              <section class="service">
+                <h3 class="h3 service-title">What I'm Doing</h3>
+                <ul class="service-list">
+                  <li class="service-item">
+                    <div class="service-icon-box">
+                      <img src="./assets/images/icon-cloud.svg" alt="cloud engineering icon" width="40">
+                    </div>
+                    <div class="service-content-box">
+                      <h4 class="h4 service-item-title">Cloud Engineering</h4>
+                      <p class="service-item-text">
+                        Designing and deploying scalable, highly available, and fault tolerant systems on AWS.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="service-item">
+                    <div class="service-icon-box">
+                      <img src="./assets/images/icon-database.svg" alt="data engineering icon" width="40">
+                    </div>
+                    <div class="service-content-box">
+                      <h4 class="h4 service-item-title">Data Engineering</h4>
+                      <p class="service-item-text">
+                        Building robust data pipelines that clean, transform, and aggregate data in complex data ecosystems.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="service-item">
+                    <div class="service-icon-box">
+                      <img src="./assets/images/icon-building.svg" alt="quantity surveying icon" width="40">
+                    </div>
+                    <div class="service-content-box">
+                      <h4 class="h4 service-item-title">Quantity Surveying</h4>
+                      <p class="service-item-text">
+                        Applying precise analysis and budget management to construction projects, ensuring financial efficiency and resource optimization.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
 
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
 
 
         <!--
           - testimonials
         -->
 
-        <section class="testimonials">
+              <section class="testimonials">
+                <h3 class="h3 testimonials-title">Testimonials</h3>
+                <ul class="testimonials-list has-scrollbar">
+                  <li class="testimonials-item">
+                    <div class="content-card" data-testimonials-item>
+                      <figure class="testimonials-avatar-box">
+                        <img src="./assets/images/avatar-mpho.png" alt="Mpho" width="60" data-testimonials-avatar>
+                      </figure>
+                      <h4 class="h4 testimonials-item-title" data-testimonials-title>Mpho</h4>
+                      <div class="testimonials-text" data-testimonials-text>
+                        <p>
+                          Sechaba's innovative approach to cloud infrastructure solutions has significantly enhanced our project's efficiency and scalability. His dedication and technical expertise were pivotal in the successful deployment of our cloud services.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+                  <li class="testimonials-item">
+                    <div class="content-card" data-testimonials-item>
+                      <figure class="testimonials-avatar-box">
+                        <img src="./assets/images/avatar-simon.png" alt="Simon" width="60" data-testimonials-avatar>
+                      </figure>
+                      <h4 class="h4 testimonials-item-title" data-testimonials-title>Simon</h4>
+                      <div class="testimonials-text" data-testimonials-text>
+                        <p>
+                          As a fellow data engineer, I've consistently been impressed by Sechaba's ability to handle complex data challenges. His contributions to our data pipeline projects have been invaluable, driving insights that propelled our objectives forward.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
 
-          <ul class="testimonials-list has-scrollbar">
+                  <li class="testimonials-item">
+                    <div class="content-card" data-testimonials-item>
+                      <figure class="testimonials-avatar-box">
+                        <img src="./assets/images/avatar-emily.png" alt="Emily Evans" width="60" data-testimonials-avatar>
+                      </figure>
+                      <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily Evans</h4>
+                      <div class="testimonials-text" data-testimonials-text>
+                        <p>
+                          Working with Sechaba on several high-stake projects, I can attest to his strong analytical skills and thorough understanding of construction cost management which have greatly benefited our project budgets and timelines.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
 
 
         <!--
@@ -453,48 +341,30 @@
 
 
         <!--
-          - clients
+          - Affiliations
         -->
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Clients</h3>
+          <h3 class="h3 clients-title">Professional Affiliations</h3>
 
           <ul class="clients-list has-scrollbar">
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              <a href="https://www.wits.ac.za" target="_blank">
+                <img src="./assets/images/wits-logo.png" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              <a href="https://aws.amazon.com/certification/" target="_blank">
+                <img src="./assets/images/aws-logo.png" alt="client logo">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              <a href"https://explore-ai.com" target="_blank">
+                <img src="./assets/images/explore-ai-logo.png" alt="client logo">
               </a>
             </li>
 
@@ -518,182 +388,145 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
             </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University of the Witwatersrand</h4>
+                <span>2019 — 2022</span>
+                <p class="timeline-text">
+                  Bachelor of Science in Construction Studies, focusing on the fundamentals of construction technology and project management.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University of the Witwatersrand</h4>
+                <span>2023</span>
+                <p class="timeline-text">
+                  Bachelor of Science (Honours) in Quantity Surveying, honing skills in cost management and economic aspects of construction projects.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Explore AI Academy</h4>
+                <span>2024</span>
+                <p class="timeline-text">
+                  Advanced training in Data Engineering, focusing on real-time data processing, cloud data solutions, and advanced analytics.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-            <h3 class="h3">Education</h3>
-          </div>
 
-          <ol class="timeline-list">
 
-            <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
             </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Data Engineering Intern</h4>
+                <span>2024</span>
+                <p class="timeline-text">
+                  Upcoming internship at ExploreAI Academy, focusing on developing skills in data pipeline construction and analytics within cloud environments.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+          <!--
+            - Affiliations
+          -->
 
-          <ol class="timeline-list">
+          <section class="clients">
 
-            <li class="timeline-item">
+            <h3 class="h3 clients-title">Certifications</h3>
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+            <ul class="clients-list has-scrollbar">
 
-              <span>2015 — Present</span>
+              <li class="clients-item">
+                <a href="https://aws.amazon.com/certification/" target="_blank">
+                  <img src="./assets/images/aws-logo.png" alt="client logo">
+                </a>
+              </li>
 
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
+              <li class="clients-item">
+                <a href"https://explore-ai.com" target="_blank">
+                  <img src="./assets/images/explore-ai-logo.png" alt="client logo">
+                </a>
+              </li>
 
-            </li>
+            </ul>
 
-            <li class="timeline-item">
+          </section>
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
 
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
+          <section class="skill">
+            <h3 class="h3 skills-title">My technical skills</h3>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">AWS Cloud Computing</h5>
+                  <data value="85"><!--85%--></data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Python</h5>
+                  <data value="80"><!--85%--></data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%;"></div>
+                </div>
+              </li>
+                <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">SQL</h5>
+                      <data value="90"><!--85%--></data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 100%;"></div>
+                    </div>
+                  </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Data Pipeline Construction</h5>
+                  <data value="75"><!--85%--></data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">HTML/CSS</h5>
+                  <data value="90"><!--85%--></data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%;"></div>
+                </div>
+              </li>
+                <li class="skills-item">
+                    <div class="title-wrapper">
+                      <h5 class="h5">Data Handling & Analysis</h5>
+                      <data value="90"><!--85%--></data>
+                    </div>
+                    <div class="skill-progress-bg">
+                      <div class="skill-progress-fill" style="width: 100%;"></div>
+                    </div>
+                  </li>
+            </ul>
+          </section>
 
       </article>
 
@@ -720,6 +553,10 @@
             </li>
 
             <li class="filter-item">
+              <button data-filter-btn>Data</button>
+            </li>
+            <!--
+            <li class="filter-item">
               <button data-filter-btn>Web design</button>
             </li>
 
@@ -730,7 +567,7 @@
             <li class="filter-item">
               <button data-filter-btn>Web development</button>
             </li>
-
+            -->
           </ul>
 
           <div class="filter-select-box">
@@ -752,6 +589,10 @@
               </li>
 
               <li class="select-item">
+                <button data-select-item>Data</button>
+              </li>
+              <!--
+              <li class="select-item">
                 <button data-select-item>Web design</button>
               </li>
 
@@ -762,13 +603,30 @@
               <li class="select-item">
                 <button data-select-item>Web development</button>
               </li>
-
+              -->
             </ul>
 
           </div>
 
           <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="Data">
+              <a href="https://www.kaggle.com/code/sechabamohlabeng/emotions-data-explore" target="_blank">
 
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/emotions-explore.jpg" alt="emotions-explore" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Emotions Data Exploration</h3>
+
+                <p class="project-category">Data</p>
+
+              </a>
+            </li>
+            <!--
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="#">
 
@@ -930,6 +788,7 @@
 
               </a>
             </li>
+            -->
 
           </ul>
 
@@ -944,7 +803,7 @@
       <!--
         - #BLOG
       -->
-
+        <!--
       <article class="blog" data-page="blog">
 
         <header>
@@ -1129,7 +988,7 @@
 
       </article>
 
-
+        -->
 
 
 
@@ -1146,7 +1005,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033200632!2d27.957622309325433!3d-26.1713439729892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg!5e0!3m2!1sen!2sza!4v1713374288941!5m2!1sen!2sza"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>

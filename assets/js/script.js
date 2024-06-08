@@ -120,19 +120,49 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// Function to send form data as JSON
+function sendFormData(data) {
+  fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    alert("Message sent successfully!");
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert("Failed to send message.");
+  });
+}
 
-    // check form validation
+// Add event to form submission
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const formData = {
+    fullname: form.querySelector('[name="fullname"]').value,
+    email: form.querySelector('[name="email"]').value,
+    message: form.querySelector('[name="message"]').value
+  };
+
+  sendFormData(formData); // Send form data as JSON
+});
+
+// Add event to all form input fields for validation
+formInputs.forEach(input => {
+  input.addEventListener("input", function () {
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
-}
+});
 
 
 

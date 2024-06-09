@@ -116,7 +116,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 // Contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formBtn = document.querySelector(".form-btn");  // Updated selector
 
 // Function to send form data as JSON
 function sendFormData(data) {
@@ -128,19 +128,18 @@ function sendFormData(data) {
     body: JSON.stringify(data)
   })
   .then(response => {
-    if (response.ok) {
-      return response.json(); // Parse it as JSON only if the response is OK
-    } else {
-      throw new Error('Failed to send message'); // Throw an error if response is not OK
+    if (!response.ok) {
+      throw new Error('Server responded with an error status.');
     }
+    return response.json();  // This ensures it always tries to parse JSON
   })
   .then(data => {
     console.log('Success:', data);
-    alert("Message sent successfully!");
+    alert(data.message);  // Display the message from the server
   })
   .catch((error) => {
     console.error('Error:', error);
-    alert("Failed to send message.");
+    alert("Failed to send message. " + error.message);  // Include error message for clarity
   });
 }
 

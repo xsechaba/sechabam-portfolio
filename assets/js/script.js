@@ -121,7 +121,7 @@ const formBtn = document.querySelector("[data-form-btn]");
 // Function to send form data as JSON
 function sendFormData(data) {
   console.log('Sending:', JSON.stringify(data)); // Add log to see what is being sent
-  fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod', {
+  fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod/contact', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

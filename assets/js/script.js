@@ -113,8 +113,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-
-
 // contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
@@ -122,6 +120,7 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 // Function to send form data as JSON
 function sendFormData(data) {
+  console.log('Sending:', JSON.stringify(data)); // Add log to see what is being sent
   fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod/contact', {
     method: 'POST',
     headers: {
@@ -129,7 +128,13 @@ function sendFormData(data) {
     },
     body: JSON.stringify(data)
   })
-  .then(response => response.json())
+  .then(response => {
+    console.log('Server Response:', response); // Log response to see what the server returns
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
     console.log('Success:', data);
     alert("Message sent successfully!");
@@ -145,7 +150,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
   const formData = {
-    fullname: form.querySelector('[name="fullname"]').value,
+    name: form.querySelector('[name="fullname"]').value,
     email: form.querySelector('[name="email"]').value,
     message: form.querySelector('[name="message"]').value
   };
@@ -163,6 +168,8 @@ formInputs.forEach(input => {
     }
   });
 });
+
+
 
 
 

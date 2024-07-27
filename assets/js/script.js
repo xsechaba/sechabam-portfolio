@@ -144,28 +144,27 @@ function sendFormData(data) {
 }
 
 // Add event to form submission
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const formData = {
-    fullname: form.querySelector('[name="fullname"]').value,
-    email: form.querySelector('[name="email"]').value,
-    message: form.querySelector('[name="message"]').value
-  };
+    const formData = {
+        fullname: document.querySelector('[name="fullname"]').value,
+        email: document.querySelector('[name="email"]').value,
+        message: document.querySelector('[name="message"]').value
+    };
 
-  sendFormData(formData); // Send form data as JSON
+    fetch(form.action, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => alert('Form submitted successfully!'))
+    .catch(error => console.error('Error:', error));
 });
 
-// Add event to all form input fields for validation
-formInputs.forEach(input => {
-  input.addEventListener("input", function () {
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-  });
-});
 
 
 

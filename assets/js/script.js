@@ -115,7 +115,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 // Contact form variables
 const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector(".form-btn");
 
 // Function to send form data as JSON
@@ -128,16 +127,19 @@ function sendFormData(formData) {
         body: JSON.stringify(formData)
     })
     .then(response => {
-        // Log the response for debugging purposes, but assume success
-        console.log('Response received:', response);
+        if (!response.ok) {
+            throw new Error(`HTTP error, status = ${response.status}`);
+        }
+        return response.json();  // Assuming the server responds with JSON
+    })
+    .then(data => {
+        console.log('Success:', data);
+        alert('Form submitted successfully! Thank you for your message.');
     })
     .catch((error) => {
-        // Log the error but still assume success
         console.error('Network error:', error);
+        alert('Failed to send message. Please try again.');
     });
-
-    // Optimistically show a success message
-    alert('Form submitted successfully! Thank you for your message.');
 }
 
 // Add event to form submission
@@ -149,6 +151,9 @@ form.addEventListener("submit", function (event) {
         email: document.querySelector('[name="email"]').value,
         message: document.querySelector('[name="message"]').value
     };
+
+    // Disable the submit button to prevent multiple submissions
+    formBtn.disabled = true;
 
     // Use the sendFormData function to process the form submission
     sendFormData(formData);

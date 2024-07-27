@@ -131,15 +131,15 @@ function sendFormData(formData) {
         if (!response.ok) {
             throw new Error('Server responded with an error status.');
         }
-        return response.json();
+        return response.json();  // Assuming the Lambda returns JSON
     })
     .then(data => {
         console.log('Success:', data);
-        alert(data);  // Display a generic success message from the server
+        alert('Form submitted successfully!');  // Generic success message
     })
     .catch((error) => {
         console.error('Error:', error);
-        alert("Failed to send message. Please try again later.");
+        alert("Failed to send message. Please try again later.");  // Improved error message
     });
 }
 

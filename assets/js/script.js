@@ -116,31 +116,31 @@ for (let i = 0; i < filterBtn.length; i++) {
 // Contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector(".form-btn");  // Updated selector
+const formBtn = document.querySelector(".form-btn");
 
 // Function to send form data as JSON
-function sendFormData(data) {
-  fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod/contact', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Server responded with an error status.');
-    }
-    return response.json();  // This ensures it always tries to parse JSON
-  })
-  .then(data => {
-    console.log('Success:', data);
-    alert(data.message);  // Display the message from the server
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-    alert("Failed to send message. " + error.message);  // Include error message for clarity
-  });
+function sendFormData(formData) {
+    fetch('https://bfopecpo96.execute-api.us-east-1.amazonaws.com/prod/contact', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Server responded with an error status.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Success:', data);
+        alert(data);  // Display a generic success message from the server
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert("Failed to send message. Please try again later.");
+    });
 }
 
 // Add event to form submission
@@ -153,17 +153,10 @@ form.addEventListener("submit", function (event) {
         message: document.querySelector('[name="message"]').value
     };
 
-    fetch(form.action, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => alert('Form submitted successfully!'))
-    .catch(error => console.error('Error:', error));
+    // Use the sendFormData function to process the form submission
+    sendFormData(formData);
 });
+
 
 
 

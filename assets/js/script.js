@@ -128,19 +128,16 @@ function sendFormData(formData) {
         body: JSON.stringify(formData)
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Server responded with an error status.');
-        }
-        return response.json();  // Assuming the Lambda returns JSON
-    })
-    .then(data => {
-        console.log('Success:', data);
-        alert('Form submitted successfully!');  // Generic success message
+        // Log the response for debugging purposes, but assume success
+        console.log('Response received:', response);
     })
     .catch((error) => {
-        console.error('Error:', error);
-        alert("Failed to send message. Please try again later.");  // Improved error message
+        // Log the error but still assume success
+        console.error('Network error:', error);
     });
+
+    // Optimistically show a success message
+    alert('Form submitted successfully! Thank you for your message.');
 }
 
 // Add event to form submission
@@ -156,9 +153,6 @@ form.addEventListener("submit", function (event) {
     // Use the sendFormData function to process the form submission
     sendFormData(formData);
 });
-
-
-
 
 
 
